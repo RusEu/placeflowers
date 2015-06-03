@@ -15,8 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+import thumbnails.urls
+from thumbnails import views
 
 urlpatterns = [
     url(r'^$', 'thumbnails.views.index'),
+    url(r'^(?P<width>\d+)$', 'thumbnails.views.with_width'),
+	url(r'^(?P<width>\d+)/(?P<height>\d+)$', 'thumbnails.views.width_and_height'),
     url(r'^admin/', include(admin.site.urls)),
 ]
