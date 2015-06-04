@@ -36,9 +36,9 @@ STATICFILES_DIRS = (
 SECRET_KEY = '59#*yw)1wds@ykuy+7e6a%mt7i4m%t((w(@xiy1leva8d9ubip'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','www.placeflowers.com','placeflowers.com']
 
 
 # Application definition
