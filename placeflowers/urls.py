@@ -22,5 +22,6 @@ urlpatterns = [
     url(r'^$', 'thumbnails.views.index'),
     url(r'^(?P<width>\d+)$', 'thumbnails.views.with_width'),
 	url(r'^(?P<width>\d+)/(?P<height>\d+)$', 'thumbnails.views.width_and_height'),
+    url(r'^recalculate$', 'thumbnails.views.recalculate'),
     url(r'^admin/', include(admin.site.urls)),
 ]
