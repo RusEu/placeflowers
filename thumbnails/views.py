@@ -33,8 +33,6 @@ def with_width(request,width):
 	costum_image = costum_image.resize( [width,width] )
 	response = HttpResponse(content_type="image/png")
 	costum_image.save(response, "PNG")
-	random_number = str(randint(1,99))
-	costum_image.save(os.path.join("static/tmp/image"+random_number+".png"),"PNG")
 	return response
 
 def width_and_height(request,width,height):
@@ -53,6 +51,4 @@ def width_and_height(request,width,height):
 	costum_image = costum_image.resize( [width,height] )
 	response = HttpResponse(content_type="image/png")
 	costum_image.save(response, "PNG")
-	random_number = str(randint(1,99))
-	costum_image.save(os.path.join("static/tmp/image"+random_number+".png"),"PNG")
 	return response
