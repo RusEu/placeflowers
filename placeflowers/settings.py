@@ -12,22 +12,19 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 
-import os
+import os,django
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SETTINGS_DIR = os.path.dirname(__file__)
-TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
-
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_PATH = os.path.join(BASE_DIR,'static')
-STATIC_ROOT = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join('static'),
+    os.path.join(BASE_DIR, "static_root"),
 )
 
+SETTINGS_DIR = os.path.dirname(__file__)
+TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -36,7 +33,7 @@ STATICFILES_DIRS = (
 SECRET_KEY = '59#*yw)1wds@ykuy+7e6a%mt7i4m%t((w(@xiy1leva8d9ubip'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','www.placeflowers.com','placeflowers.com']
 
@@ -70,7 +67,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            TEMPLATE_PATH
+            TEMPLATE_PATH,
         ],
         'APP_DIRS': True,
         'OPTIONS': {

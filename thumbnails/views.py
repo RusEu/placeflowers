@@ -6,9 +6,12 @@ import io,os
 from urllib2 import urlopen
 from random import randint
 from django.conf import settings
+from django.template import RequestContext
+from django.core.context_processors import request
+
 # Create your views here.
 def index(request):
-	return render_to_response("index.html")
+	return render_to_response("index.html",RequestContext(request))
 
 def recalculate(request):	
 	all_images = Flower.objects.all()

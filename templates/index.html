@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <html>
 <head>
 <title>Welcome To PlaceFlowers</title>
@@ -11,11 +12,19 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <style>
+	body {
+		overflow:hidden;
+		background-color: #fff;
+	}
 	.jumbotron * {
-		font-size: 180%;
+		font-size: 4vw;
 	}
 	.jumbotron {
+		background-color: #fff;
 		background-image: url("http://www.cedimes.org/wp-content/uploads/2015/01/feat.jpg") !important;
+		background-repeat: no-repeat;
+		background-size: 100%; 
+		height:90vh;
 	}
 	.grey {
 		background-color: #f8f8f8;
@@ -41,9 +50,9 @@
 	</nav>
 	<div>
 		<div class="jumbotron">
-			<h2 class="text-center" style="margin-bottom:120px;"><span class="grey">This is a Project-Gift</span></h2>
+			<h2 class="text-center" style="margin-bottom:12vw;"><span class="grey">This is a Project-Gift</span></h2>
 			<p class="text-center"> <span class="grey">For all the webdesigner <span class="red">girls</span> :)</span></p>
-			<p style="margin-bottom:80px;" class="text-center"><span class="grey">Example : www.placeflowers.com/50/50</span></p>
+			<p style="margin-bottom:8vh;" class="text-center"><span class="grey">Example : www.placeflowers.com/50/50</span></p>
 		</div>
 	</div>
 <script>
